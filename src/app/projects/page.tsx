@@ -2,11 +2,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import ProjectCard from '@/components/projectCard/ProjectCard'
-import Link from 'next/link'
 import projects from '../../../public/data/projects'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },

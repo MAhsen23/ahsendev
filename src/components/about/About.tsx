@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Code, Palette, Globe, Zap, Layers, Cpu, User2, PhoneCall, MailIcon, Calendar, GraduationCap, MapPin, Briefcase, Code2, Database, Terminal, Server, Award, Coffee, Book, Headphones, Gamepad, Github, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Code, Zap, User2, PhoneCall, MailIcon, MapPin, Briefcase, Code2, Database, Terminal, Server, Coffee, Book, Headphones, Gamepad, Github, Instagram, Youtube, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "../ui/progress";
