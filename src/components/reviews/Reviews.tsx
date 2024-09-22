@@ -9,7 +9,14 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-const reviews = [
+interface Review {
+    name: string
+    position: string
+    rating: number
+    review: string
+}
+
+const reviews: Review[] = [
     {
         name: 'John Doe',
         position: 'CEO, Tech Innovators',
@@ -36,7 +43,7 @@ const reviews = [
     },
 ]
 
-const ReviewCard = ({ name, position, rating, review }: any) => (
+const ReviewCard = ({ name, position, rating, review }: Review) => (
     <Card className="h-72 shadow-none bg-secondary/20 flex flex-col">
         <CardHeader className="pb-2">
             <div className="flex items-center pb-6">
@@ -68,7 +75,7 @@ const fadeInUp = {
     animate: { opacity: 1, y: 0 },
 }
 
-export default function Component() {
+export default function Reviews() {
     return (
         <section className="md:py-28 py-20">
             <div className="container mx-auto lg:px-16 px-8">

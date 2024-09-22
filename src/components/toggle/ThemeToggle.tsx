@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Moon, Sun } from "lucide-react";
-export default function ThemeToggle({ theme, toggleTheme }: any) {
+
+interface ThemeToggleProps {
+    theme: "light" | "dark";
+    toggleTheme: () => void;
+}
+export default function ThemeToggle({ theme, toggleTheme }: ThemeToggleProps) {
     return (
         <Button
             variant="ghost"

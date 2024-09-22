@@ -13,10 +13,21 @@ const fadeInUp = {
 }
 
 interface Project {
-    id: string
-    title: string
-    shortDescription: string
-    image: string
+    id: number;
+    title: string;
+    description: string;
+    shortDescription: string;
+    image: string;
+    images: string[];
+    tags: string[];
+    githubLink: string;
+    liveLink: string;
+    category: string;
+    features: string[];
+    date: string;
+    duration: string;
+    client: string;
+    role: string;
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
