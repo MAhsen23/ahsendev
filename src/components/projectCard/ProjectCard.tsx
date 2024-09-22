@@ -12,7 +12,14 @@ const fadeInUp = {
     exit: { opacity: 0, y: -20 }
 }
 
-const ProjectCard = ({ project }: { project: any }) => {
+interface Project {
+    id: string
+    title: string
+    shortDescription: string
+    image: string
+}
+
+const ProjectCard = ({ project }: { project: Project }) => {
     return (
         <motion.div
             variants={fadeInUp}
