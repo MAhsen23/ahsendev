@@ -78,10 +78,10 @@ export default function Header() {
                     </Link>
                     <nav className="hidden md:flex space-x-6">
                         <NavLinks activeSection={activeSection} scrollToSection={scrollToSection} />
-                        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                        <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
                     </nav>
                     <div className="md:hidden flex items-center">
-                        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                        <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
                         <Button variant="ghost" size="icon" onClick={toggleMenu} className="ml-2">
                             <Menu className="h-6 w-6" />
                             <span className="sr-only">Toggle menu</span>
