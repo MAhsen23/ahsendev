@@ -28,6 +28,7 @@ export default function AllProjects() {
     const filteredProjects = activeCategory === 'All Projects'
         ? projects
         : projects.filter(project => project.category === activeCategory)
+    const tabWidth = `w-[${categories.length * 160}px]`
 
     return (
         <div className="flex min-h-screen flex-col">
@@ -41,7 +42,7 @@ export default function AllProjects() {
                 >
                     <Tabs defaultValue="All Projects" className="mb-12">
                         <div className='text-center'>
-                            <TabsList className="lg:flex mx-auto lg:flex-row lg:max-w-[640px] flex-col space-y-1 lg:space-y-0 lg:border rounded-full">
+                            <TabsList className={`lg:flex mx-auto lg:flex-row flex-col space-y-1 lg:space-y-0 lg:border rounded-full`} style={{ width: `${categories.length * 160}px` }}>
                                 {categories.map((category) => (
                                     <TabsTrigger
                                         className='w-[160px]'

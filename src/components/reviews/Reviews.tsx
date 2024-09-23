@@ -65,7 +65,7 @@ const ReviewCard = ({ name, position, rating, review }: Review) => (
             </div>
         </CardHeader>
         <CardContent className="pt-4">
-            <p className="text-sm text-muted-foreground">{review}</p>
+            <p className="text-sm text-muted-foreground leading-normal">{review}</p>
         </CardContent>
     </Card>
 )

@@ -1,7 +1,8 @@
 "use client"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { Download, Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
     return (
@@ -37,9 +38,11 @@ export default function Hero() {
                 <Button size="lg">
                     <Download className="mr-2 h-4 w-4" /> Download CV
                 </Button>
-                <Button size="lg" className="shadow-none" variant="outline">
-                    <Mail className="mr-2 h-4 w-4" /> Contact Me
-                </Button>
+                <Link href="#contact">
+                    <Button size="lg" className="shadow-none" variant="outline">
+                        <Mail className="mr-2 h-4 w-4" /> Contact Me
+                    </Button>
+                </Link>
             </motion.div>
             <motion.div
                 initial={{ y: -20, opacity: 0 }}
@@ -47,14 +50,14 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 1 }}
                 className="flex gap-4 mt-8"
             >
-                <a href="#" className="text-muted-foreground hover:text-foreground">
+                <a href="https://github.com/MAhsen23" className="text-muted-foreground hover:text-foreground">
                     <Github className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground">
+                <a href="https://www.linkedin.com/in/m-ahsen/" className="text-muted-foreground hover:text-foreground">
                     <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground">
-                    <Twitter className="h-6 w-6" />
+                <a href="https://www.instagram.com/ahsenshiekh_ak/" className="text-muted-foreground hover:text-foreground">
+                    <Instagram className="h-6 w-6" />
                 </a>
             </motion.div>
         </motion.section>

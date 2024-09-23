@@ -7,20 +7,23 @@ import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import ThemeToggle from "../toggle/ThemeToggle"
+import { usePathname, useRouter } from "next/navigation"
 
 const navItems = [
-    { href: "#home", label: "Home", id: "home" },
-    { href: "#about", label: "About", id: "about" },
-    { href: "#services", label: "Services", id: "services" },
-    { href: "#projects", label: "My Projects", id: "projects" },
-    { href: "#blog", label: "Blog", id: "blog" },
-    { href: "#contact", label: "Contact", id: "contact" },
+    { href: "/", label: "Home", id: "home" },
+    { href: "/#about", label: "About", id: "about" },
+    { href: "/#services", label: "Services", id: "services" },
+    { href: "/#projects", label: "My Projects", id: "projects" },
+    { href: "/#blog", label: "Blog", id: "blog" },
+    { href: "/#contact", label: "Contact", id: "contact" },
 ]
 
 export default function Header() {
     const { theme, setTheme } = useTheme()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeSection, setActiveSection] = useState('home')
+    const pathname = usePathname()
+    const router = useRouter()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,21 +36,33 @@ export default function Header() {
                 }
             }
         }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+        if (pathname === "/") {
+            window.addEventListener('scroll', handleScroll)
+            return () => window.removeEventListener('scroll', handleScroll)
+        } else {
+            setActiveSection(pathname.substring(1))
+        }
+    }, [pathname])
 
     const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-            const headerOffset = 80
-            const elementPosition = element.getBoundingClientRect().top
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+        if (pathname !== "/") {
+            if (sectionId === "home") {
+                router.push("/")
+            } else {
+                router.push(`/#${sectionId}`)
+            }
+        } else {
+            const element = document.getElementById(sectionId)
+            if (element) {
+                const headerOffset = 80
+                const elementPosition = element.getBoundingClientRect().top
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            })
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                })
+            }
         }
         setIsMenuOpen(false)
     }
@@ -109,7 +124,7 @@ export default function Header() {
                             className="fixed top-0 right-0 h-full w-64 bg-background z-50 overflow-y-auto"
                         >
                             <div className="flex justify-between items-center h-20 px-4 mb-8">
-                                <Link href="#home" onClick={() => scrollToSection('home')} className="flex items-center space-x-2">
+                                <Link href="/" className="flex items-center space-x-2">
                                     <span className="inline-block font-bold text-2xl">AS</span>
                                 </Link>
                                 <Button variant="ghost" size="icon" onClick={toggleMenu}>

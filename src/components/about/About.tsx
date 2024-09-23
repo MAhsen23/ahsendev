@@ -40,10 +40,10 @@ const tools = [
 ];
 
 const socialLinks = [
-    { icon: <Github size={20} />, url: "https://github.com/yourusername" },
-    { icon: <Instagram size={20} />, url: "https://linkedin.com/in/yourusername" },
-    { icon: <Youtube size={20} />, url: "https://twitter.com/yourusername" },
-    { icon: <Linkedin size={20} />, url: "mailto:your.email@example.com" },
+    { icon: <Github size={20} />, url: "https://github.com/MAhsen23" },
+    { icon: <Instagram size={20} />, url: "https://www.instagram.com/ahsenshiekh_ak/" },
+    { icon: <Youtube size={20} />, url: "https://www.youtube.com/@codingiva" },
+    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/m-ahsen/" },
 ];
 
 const experiences = [

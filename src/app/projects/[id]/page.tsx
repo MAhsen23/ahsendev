@@ -107,7 +107,7 @@ export default function ProjectPage() {
                             {project.images.map((image, index) => (
                                 <motion.div
                                     key={index}
-                                    className="cursor-pointer overflow-hidden rounded-xl"
+                                    className="cursor-pointer overflow-hidden border rounded-xl"
                                     whileHover={{ scale: 1.05 }}
                                     onClick={() => openLightbox(index)}
                                 >

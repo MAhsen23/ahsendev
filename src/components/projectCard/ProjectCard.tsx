@@ -52,7 +52,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 </CardHeader>
                 <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-2 line-clamp-2">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 line-clamp-2">{project.shortDescription}</p>
+                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-2">{project.shortDescription}</p>
                     <div className="flex gap-4">
                         <Link href={`/projects/${project.id}`}>
                             <Button variant="link" className="p-0 group-hover:underline">
