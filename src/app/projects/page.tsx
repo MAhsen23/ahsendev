@@ -28,7 +28,6 @@ export default function AllProjects() {
     const filteredProjects = activeCategory === 'All Projects'
         ? projects
         : projects.filter(project => project.category === activeCategory)
-    const tabWidth = `w-[${categories.length * 160}px]`
 
     return (
         <div className="flex min-h-screen flex-col">

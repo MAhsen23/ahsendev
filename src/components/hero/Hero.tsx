@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Download, Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { Download, Mail, Github, Linkedin, Instagram } from "lucide-react"
 import Link from "next/link"
 
 export default function Hero() {
