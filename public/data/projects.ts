@@ -115,6 +115,31 @@ const projects = [
         client: "BIIT University",
         role: "Full Stack Developer"
     },
+    {
+        id: 5,
+        title: "Food Ordering Website",
+        description: "Food Ordering Website is a website built with Next.js and MongoDB with complete backend and frontend to manage a food ordering system.",
+        shortDescription: "Web app for managing a food ordering system.",
+        image: "/projects/project-4.png",
+        images: [
+            "/projects/4/1.png",
+        ],
+        tags: ["Next.js", "MongoDB", "Tailwind CSS"],
+        githubLink: "",
+        liveLink: "",
+        category: "Full Stack",
+        features: [
+            "User authentication and authorization",
+            "Product catalog with search and filter functionality",
+            "Shopping cart and checkout process",
+            "Order management system",
+            "Responsive design for mobile and desktop"
+        ],
+        date: "September 2024",
+        duration: "4 weeks",
+        client: "Self-initiated",
+        role: "Full Stack Developer"
+    },
 ]
 
 export default projects;
