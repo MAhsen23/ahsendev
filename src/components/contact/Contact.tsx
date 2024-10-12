@@ -19,14 +19,14 @@ export default function Contact() {
 
     const [responseMessage, setResponseMessage] = useState('');
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.id]: e.target.value
         });
     };
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!formData.name || !formData.email || !formData.message) {
