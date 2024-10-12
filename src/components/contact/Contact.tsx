@@ -1,15 +1,60 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { PhoneCall, Mail, MapPin } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { FloatingLabelInput } from '../labelInput/LabelInput';
 
 const contactInfo = [
-    { icon: <PhoneCall size={20} />, title: 'Phone ', lines: ['+92 336 0906030',] },
-    { icon: <Mail size={20} />, title: 'Email ', lines: ['ahsan.shiekh@outlook.com',] },
-    { icon: <MapPin size={20} />, title: 'Address ', lines: ['Rawalpindi, Pakistan',] },
+    { icon: <PhoneCall size={20} />, title: 'Phone ', lines: ['+92 336 0906030'] },
+    { icon: <Mail size={20} />, title: 'Email ', lines: ['ahsan.shiekh@outlook.com'] },
+    { icon: <MapPin size={20} />, title: 'Address ', lines: ['Rawalpindi, Pakistan'] },
 ];
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [responseMessage, setResponseMessage] = useState('');
+
+    const handleChange = (e: any) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+
+        if (!formData.name || !formData.email || !formData.message) {
+            setResponseMessage('Please fill out all fields.');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setResponseMessage('Message sent successfully!');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setResponseMessage('Failed to send message.');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            setResponseMessage('An error occurred. Please try again later.');
+        }
+    };
+
     return (
         <section id='contact' className="py-24">
             <div className="container mx-auto px-8">
@@ -37,23 +82,32 @@ export default function Contact() {
                                 <br />
                                 <span className="font-semibold text-xl text-foreground">design work or partnerships.</span>
                             </h3>
-                            <form className="space-y-8">
+                            <form className="space-y-8" onSubmit={handleSubmit}>
                                 <FloatingLabelInput
                                     label="Name *"
                                     id="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                 />
                                 <FloatingLabelInput
                                     label="Email *"
                                     id="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                 />
                                 <FloatingLabelInput
                                     label="Message *"
                                     id="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                 />
                                 <Button size={"lg"} variant={"outline"} className="bg-transparent shadow-none">
                                     Submit
                                 </Button>
                             </form>
+                            {responseMessage && (
+                                <p className="mt-4 text-center text-muted-foreground">{responseMessage}</p>
+                            )}
                         </div>
                     </div>
                 </div>
