@@ -136,7 +136,7 @@ export default function ProjectPage() {
                     <motion.div {...fadeInUp} className="text-center">
                         <h2 className="text-3xl border-t pt-8 font-bold mb-6">Interested in working together?</h2>
                         <Button size="lg" asChild>
-                            <Link href="/contact">Get in Touch</Link>
+                            <Link href="/#contact">Get in Touch</Link>
                         </Button>
                     </motion.div>
                 </motion.article>
