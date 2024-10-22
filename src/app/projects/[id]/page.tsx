@@ -62,7 +62,7 @@ export default function ProjectPage() {
                         <motion.h1 {...fadeInUp} className="text-4xl md:text-5xl font-bold mb-4">
                             {project.title}
                         </motion.h1>
-                        <motion.p {...fadeInUp} className="text-xl text-muted-foreground mb-6">
+                        <motion.p {...fadeInUp} className="text-lg text-muted-foreground mb-6">
                             {project.description}
                         </motion.p>
                         <motion.div {...fadeInUp} className="flex flex-wrap gap-4 mb-6">
