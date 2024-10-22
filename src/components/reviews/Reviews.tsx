@@ -18,30 +18,30 @@ interface Review {
 
 const reviews: Review[] = [
     {
-        name: 'John Doe',
-        position: 'CEO, Tech Innovators',
+        name: 'Asad',
+        position: 'Founder, Lady Bird Cosmetics',
         rating: 5,
-        review: 'Innovative web development exceeded our expectations and boosted our online presence significantly.',
+        review: 'Created a stunning e-commerce website that beautifully showcases our cosmetic products and enhances customer engagement.',
     },
     {
-        name: 'Jane Smith',
-        position: 'Marketing Director, Solutions',
-        rating: 5,
-        review: 'Outstanding professionalism. They transformed complex technical concepts into user-friendly designs.',
-    },
-    {
-        name: 'Mike Johnson',
+        name: 'Michael Johnson',
         position: 'Founder, StartUp Ventures',
-        rating: 5,
-        review: 'Delivered a scalable, high-performing website that aligns perfectly with our brand vision.',
+        rating: 4,
+        review: 'Their app solutions have streamlined our accounting processes and improved accuracy.',
     },
     {
-        name: 'Emily Brown',
-        position: 'UX Director, Creative Designs Co.',
+        name: 'Ozair Mohtshim',
+        position: 'CEO, FinTrack Accounting',
         rating: 5,
-        review: 'Excellent UX design with responsive implementation across devices, showing a deep understanding of user behavior.',
+        review: 'Delivered a scalable, high- performing website that aligns perfectly with our brand vision.',
     },
-]
+    {
+        name: 'Ayesha Ahmed',
+        position: 'CTO, Innovative Solutions',
+        rating: 5,
+        review: 'Their app development expertise and attention to detail resulted in a seamless and efficient launch.',
+    },
+];
 
 const ReviewCard = ({ name, position, rating, review }: Review) => (
     <Card className="h-72 shadow-none bg-secondary/20 flex flex-col">

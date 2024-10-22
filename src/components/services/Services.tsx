@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Palette, Globe, Zap, Layers, Cpu } from "lucide-react";
+import { Code, Zap, Layers, Cpu, Smartphone, Headphones } from "lucide-react";
 
 const services = [
     {
@@ -11,21 +11,20 @@ const services = [
         title: "Web Development",
         description:
             "Building responsive and dynamic web applications using modern frameworks and technologies.",
-        tags: ["React", "Next.js", "Node.js"],
+        tags: ["React", "Next.js", "Tailwind"],
     },
     {
-        icon: <Palette className="h-8 w-8 text-primary" />,
-        title: "UI/UX Design",
+        icon: <Smartphone className="h-8 w-8 text-primary" />,
+        title: "Mobile App Development",
         description:
-            "Crafting intuitive and visually appealing user interfaces for seamless user experiences.",
-        tags: ["Figma", "Adobe XD", "Sketch"],
+            "Creating engaging and high performance mobile applications for iOS and Android platforms.",
+        tags: ["React Native", "SQLite", "Redux"],
     },
     {
-        icon: <Globe className="h-8 w-8 text-primary" />,
-        title: "SEO Optimization",
-        description:
-            "Improving your website's visibility and ranking on search engines to drive organic traffic.",
-        tags: ["On-page SEO", "Technical SEO", "Content Strategy"],
+        icon: <Cpu className="h-8 w-8 text-primary" />,
+        title: "API Development",
+        description: "Creating robust and scalable APIs to power your web and mobile applications.",
+        tags: ["RESTful", "GraphQL", "Microservices"],
     },
     {
         icon: <Zap className="h-8 w-8 text-primary" />,
@@ -38,14 +37,14 @@ const services = [
         icon: <Layers className="h-8 w-8 text-primary" />,
         title: "Full-Stack Solutions",
         description:
-            "Developing end-to-end web solutions from database design to front-end implementation.",
+            "Developing full stack web solutions from database design to front end implementation.",
         tags: ["MongoDB", "Express.js", "React", "Node.js"],
     },
     {
-        icon: <Cpu className="h-8 w-8 text-primary" />,
-        title: "API Development",
-        description: "Creating robust and scalable APIs to power your web and mobile applications.",
-        tags: ["RESTful", "GraphQL", "Microservices"],
+        icon: <Headphones className="h-8 w-8 text-primary" />,
+        title: "Technical Support",
+        description: "Providing 24/7 technical support to ensure your applications run smoothly.",
+        tags: ["Customer Service", "Troubleshooting", "Maintenance"],
     },
 ];
 
