@@ -15,7 +15,7 @@ const services = [
     },
     {
         icon: <Smartphone className="h-8 w-8 text-primary" />,
-        title: "Mobile App Development",
+        title: "App Development",
         description:
             "Creating engaging and high performance mobile applications for iOS and Android platforms.",
         tags: ["React Native", "SQLite", "Redux"],
