@@ -30,10 +30,10 @@ const reviews: Review[] = [
         review: 'Their app solutions have streamlined our accounting processes and improved accuracy.',
     },
     {
-        name: 'Ozair Mohtshim',
+        name: 'Ozair',
         position: 'CEO, FinTrack Accounting',
         rating: 5,
-        review: 'Delivered a scalable, high- performing website that aligns perfectly with our brand vision.',
+        review: 'Delivered a scalable, high performing website that aligns perfectly with our brand vision.',
     },
     {
         name: 'Ayesha Ahmed',
