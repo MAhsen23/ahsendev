@@ -19,7 +19,7 @@ const fadeInUp = {
 
 export default function ProjectPage() {
     const { id } = useParams();
-    const project = projects.find((p) => p.id === Number(id));
+    const project = projects.find((p) => p.id === (id));
 
     if (!project) {
         notFound();
