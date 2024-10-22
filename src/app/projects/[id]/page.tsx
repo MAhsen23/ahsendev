@@ -88,16 +88,20 @@ export default function ProjectPage() {
                             </div>
                         </motion.div>
                         <motion.div {...fadeInUp} className="flex gap-4">
-                            <Button asChild>
-                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                                    <ExternalLink className="mr-2 h-4 w-4" /> View Live
-                                </a>
-                            </Button>
-                            <Button variant="outline" asChild>
-                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                    <Github className="mr-2 h-4 w-4" /> View on GitHub
-                                </a>
-                            </Button>
+                            {project.liveLink &&
+                                <Button asChild>
+                                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                        <ExternalLink className="mr-2 h-4 w-4" /> View Live
+                                    </a>
+                                </Button>
+                            }
+                            {project.githubLink &&
+                                <Button variant="outline" asChild>
+                                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                                        <Github className="mr-2 h-4 w-4" /> View on GitHub
+                                    </a>
+                                </Button>
+                            }
                         </motion.div>
                     </header>
 

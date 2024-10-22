@@ -69,7 +69,7 @@ const projects = [
         ],
         tags: ["Next.js", "Tailwind CSS", "Shadcn", "Motion Framer"],
         githubLink: "",
-        liveLink: "ahsandev.vercel.app",
+        liveLink: "",
         category: "Front End",
         features: [
             "Responsive design",
