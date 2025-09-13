@@ -1,31 +1,31 @@
 const projects = [
-    // {
-    //     id: 'cyclesync',
-    //     title: "Cycle Sync",
-    //     description: "Cycle Sync is an innovative mobile application that empowers women to take control of their reproductive health. By leveraging advanced algorithms and user-friendly tracking features, the app provides accurate predictions for menstrual cycles, fertility windows, and ovulation days. With its intuitive interface and comprehensive calendar integration, CycleSync offers a holistic approach to menstrual health management, helping users make informed decisions about their bodies and family planning.",
-    //     shortDescription: "Empowering women's health through precise cycle tracking and fertility predictions.",
-    //     image: "/projects/cyclesync/2.png",
-    //     images: [
-    //         "/projects/cyclesync/2.png",
-    //         "/projects/cyclesync/3.png",
-    //         "/projects/cyclesync/4.png",
-    //         "/projects/cyclesync/5.png",
-    //     ],
-    //     tags: ["React Native", "Node.js", "SQLite"],
-    //     githubLink: "",
-    //     liveLink: "",
-    //     category: "Mobile App",
-    //     features: [
-    //         "Predict future periods",
-    //         "Track fertility and ovulation days",
-    //         "Calendar integration for tracking",
-    //         "User-friendly interface",
-    //     ],
-    //     date: "October 2024",
-    //     duration: "6 weeks",
-    //     client: "Self-initiated",
-    //     role: "Full Stack Developer"
-    // },
+    {
+        id: 'cyclesync',
+        title: "Cycle Sync",
+        description: "Cycle Sync is an innovative mobile application that empowers women to take control of their reproductive health. By leveraging advanced algorithms and user-friendly tracking features, the app provides accurate predictions for menstrual cycles, fertility windows, and ovulation days. With its intuitive interface and comprehensive calendar integration, CycleSync offers a holistic approach to menstrual health management, helping users make informed decisions about their bodies and family planning.",
+        shortDescription: "Empowering women's health through precise cycle tracking and fertility predictions.",
+        image: "/projects/cyclesync/2.png",
+        images: [
+            "/projects/cyclesync/2.png",
+            "/projects/cyclesync/3.png",
+            "/projects/cyclesync/4.png",
+            "/projects/cyclesync/5.png",
+        ],
+        tags: ["React Native", "Node.js", "SQLite"],
+        githubLink: "",
+        liveLink: "",
+        category: "Mobile App",
+        features: [
+            "Predict future periods",
+            "Track fertility and ovulation days",
+            "Calendar integration for tracking",
+            "User-friendly interface",
+        ],
+        date: "October 2024",
+        duration: "6 weeks",
+        client: "Self-initiated",
+        role: "Full Stack Developer"
+    },
     {
         id: 'ecommerce-website',
         title: "Ecommerce Website",
