@@ -27,6 +27,35 @@ const projects = [
         role: "Full Stack Developer"
     },
     {
+        id: 'fintrack-website',
+        title: "Fin Track Accounting Website",
+        description: "An Accounting services website built with Next.js and deployed on Vercel with complete UI and contact form integration on emails using nodemailer.",
+        shortDescription: "Accounting services website with Next.js and Vercel.",
+        image: "/projects/fintrack/1.png",
+        images: [
+            "/projects/fintrack/1.png",
+            "/projects/fintrack/2.png",
+            "/projects/fintrack/3.png",
+            "/projects/fintrack/4.png",
+            "/projects/fintrack/5.png",
+        ],
+        tags: ["Next.js", "Vercel", "Tailwind CSS"],
+        githubLink: "",
+        liveLink: "",
+        category: "Web Development",
+        features: [
+            "Contact form integration on emails using nodemailer",
+            "Responsive design for mobile and desktop",
+            "UI and UX design",
+            "SEO friendly",
+            "Performance optimization",
+        ],
+        date: "December 2024",
+        duration: "1 week",
+        client: "Fin Track Accounting",
+        role: "Web Developer"
+    },
+    {
         id: 'ecommerce-website',
         title: "Ecommerce Website",
         description: "An Ecommerce website built with Next.js and MongoDB with complete backend and frontend.",
@@ -56,7 +85,6 @@ const projects = [
         client: "Self-initiated",
         role: "Full Stack Developer"
     },
-
     {
         id: 'personal-portfolio',
         title: "Personal Portfolio",
