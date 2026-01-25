@@ -33,7 +33,6 @@ export default function AllProjects() {
         <div className="flex min-h-screen flex-col bg-background selection:bg-primary/30">
             <Header />
             <main className="flex-1 py-24 relative overflow-hidden">
-                {/* Background Decorations */}
                 <div className="absolute top-0 left-0 w-full h-full -z-10">
                     <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
                     <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />

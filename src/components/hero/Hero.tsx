@@ -34,10 +34,14 @@ export default function Hero() {
                         initial="initial"
                         animate="animate"
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1] mb-6"
+                        className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-10"
                     >
-                        Muhammad <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/40">Ahsen</span>
+                        <span className="text-sm md:text-base lg:text-lg block font-bold text-primary uppercase tracking-[0.4em] mb-4 opacity-70">
+                            Muhammad
+                        </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/40">
+                            Ahsen<span className="text-foreground">.</span>
+                        </span>
                     </motion.h1>
 
                     <motion.p
