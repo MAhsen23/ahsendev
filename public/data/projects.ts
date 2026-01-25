@@ -31,7 +31,7 @@ const projects = [
         title: "Fin Track Accounting Website",
         description: "An Accounting services website built with Next.js and deployed on Vercel with complete UI and contact form integration on emails using nodemailer.",
         shortDescription: "Accounting services website with Next.js and Vercel.",
-        image: "/projects/fintrack/1.png",
+        image: "/projects/fintrack.png",
         images: [
             "/projects/fintrack/1.png",
             "/projects/fintrack/2.png",
