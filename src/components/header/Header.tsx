@@ -88,15 +88,28 @@ export default function Header() {
                 className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
             >
                 <div className="container mx-auto px-4 md:px-8 flex h-20 items-center justify-between">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <span className="inline-block font-bold text-2xl">AS</span>
+                    <Link href="/" className="group flex items-center">
+                        <div className="relative flex items-center justify-center">
+                            {/* Animated Background Pulse */}
+                            <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                            {/* Geometric Icon Logo */}
+                            <div className="relative flex p-2.5 bg-background border-2 border-primary/20 rounded-xl group-hover:border-primary/50 transition-all duration-300">
+                                <div className="grid grid-cols-2 gap-1.5">
+                                    <div className="w-2.5 h-2.5 rounded-sm bg-primary transition-transform duration-500 group-hover:scale-110" />
+                                    <div className="w-2.5 h-2.5 rounded-sm bg-primary/40 transition-transform duration-500 group-hover:scale-90" />
+                                    <div className="w-2.5 h-2.5 rounded-sm bg-primary/40 transition-transform duration-500 group-hover:scale-90" />
+                                    <div className="w-2.5 h-2.5 rounded-sm bg-primary transition-transform duration-500 group-hover:scale-110" />
+                                </div>
+                            </div>
+                        </div>
                     </Link>
                     <nav className="hidden md:flex space-x-6">
                         <NavLinks activeSection={activeSection} scrollToSection={scrollToSection} />
                         <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
                     </nav>
                     <div className="md:hidden flex items-center">
-                        <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
+                        {/* <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} /> */}
                         <Button variant="ghost" size="icon" onClick={toggleMenu} className="ml-2">
                             <Menu className="h-6 w-6" />
                             <span className="sr-only">Toggle menu</span>
@@ -124,8 +137,18 @@ export default function Header() {
                             className="fixed top-0 right-0 h-full w-64 bg-background z-50 overflow-y-auto"
                         >
                             <div className="flex justify-between items-center h-20 px-4 mb-8">
-                                <Link href="/" className="flex items-center space-x-2">
-                                    <span className="inline-block font-bold text-2xl">AS</span>
+                                <Link href="/" className="group flex items-center">
+                                    <div className="relative flex items-center justify-center">
+                                        <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="relative flex p-2.5 bg-background border-2 border-primary/10 rounded-xl group-hover:border-primary/30 transition-all duration-300 scale-90">
+                                            <div className="grid grid-cols-2 gap-1.5">
+                                                <div className="w-2.5 h-2.5 rounded-sm bg-primary" />
+                                                <div className="w-2.5 h-2.5 rounded-sm bg-primary/40" />
+                                                <div className="w-2.5 h-2.5 rounded-sm bg-primary/40" />
+                                                <div className="w-2.5 h-2.5 rounded-sm bg-primary" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Link>
                                 <Button variant="ghost" size="icon" onClick={toggleMenu}>
                                     <X className="h-6 w-6" />

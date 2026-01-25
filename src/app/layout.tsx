@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider"
 
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800', '900'],
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -21,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} bg-background`}>
+      <body className={`${inter.className} bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

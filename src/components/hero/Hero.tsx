@@ -27,7 +27,7 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="max-w-[700px] text-lg text-muted-foreground sm:text-xl mt-4"
             >
-                A passionate web developer creating beautiful and functional websites.
+                Innovative Full Stack Developer specializing in Node.js, React Native, and Next.js. Focused on creating cross-platform mobile apps and responsive web applications.
             </motion.p>
             <motion.div
                 initial={{ y: -20, opacity: 0 }}
