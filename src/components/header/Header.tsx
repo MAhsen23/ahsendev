@@ -90,10 +90,7 @@ export default function Header() {
                 <div className="container mx-auto px-4 md:px-8 flex h-20 items-center justify-between">
                     <Link href="/" className="group flex items-center">
                         <div className="relative flex items-center justify-center">
-                            {/* Animated Background Pulse */}
                             <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                            {/* Geometric Icon Logo */}
                             <div className="relative flex p-2.5 bg-background border-2 border-primary/20 rounded-xl group-hover:border-primary/50 transition-all duration-300">
                                 <div className="grid grid-cols-2 gap-1.5">
                                     <div className="w-2.5 h-2.5 rounded-sm bg-primary transition-transform duration-500 group-hover:scale-110" />
@@ -109,7 +106,7 @@ export default function Header() {
                         <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
                     </nav>
                     <div className="md:hidden flex items-center">
-                        {/* <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} /> */}
+                        <ThemeToggle theme={theme as "dark" | "light"} toggleTheme={toggleTheme} />
                         <Button variant="ghost" size="icon" onClick={toggleMenu} className="ml-2">
                             <Menu className="h-6 w-6" />
                             <span className="sr-only">Toggle menu</span>
