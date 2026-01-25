@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Zap, User2, PhoneCall, MailIcon, MapPin, Briefcase, Code2, Database, Terminal, Server, Coffee, Book, Headphones, Gamepad, Github, Instagram, Youtube, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "../ui/progress";
 
 const infoData = [
     { icon: <User2 size={20} />, text: 'Muhammad Ahsen', label: 'Name' },
@@ -109,11 +108,13 @@ export default function About() {
                         },
                     }}
                 >
-                    <motion.div variants={fadeInUp} className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter">
-                            About <span className="text-primary">Me</span>
-                        </h2>
-                    </motion.div>
+                    <motion.h2
+                        variants={fadeInUp}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl md:text-5xl font-bold text-center mb-12"
+                    >
+                        About me
+                    </motion.h2>
                     <div className="flex flex-col lg:flex-row gap-8">
                         <motion.div className="lg:w-[40%]" variants={fadeInUp}>
                             <div className="p-6">
