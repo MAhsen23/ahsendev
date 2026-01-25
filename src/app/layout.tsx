@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider"
 
-const inter = Inter({
+const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-background`}>
+      <body className={`${nunito.className} bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
