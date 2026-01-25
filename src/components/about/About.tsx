@@ -47,16 +47,6 @@ const socialLinks = [
 
 const experiences = [
     {
-        company: "Tech Originators",
-        role: "Lead Full Stack Developer",
-        duration: "2025 – Present",
-        description: [
-            "Leading cross-functional teams to deliver high-quality mobile and web solutions.",
-            "Architecting scalable backend systems and responsive frontend applications.",
-            "Mentoring junior developers and implementing best practices for code quality."
-        ]
-    },
-    {
         company: "Galore, Malaysia",
         role: "Senior React Native Developer",
         duration: "2025 Feb – Present",
@@ -119,7 +109,7 @@ export default function About() {
                         <motion.div className="lg:w-[40%]" variants={fadeInUp}>
                             <div className="p-6">
                                 <Image
-                                    src="/me.jpg"
+                                    src="/me.png"
                                     alt="Muhammad Ahsen"
                                     width={300}
                                     height={300}
